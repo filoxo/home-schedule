@@ -6,34 +6,46 @@ export interface Day {
 const Schedule: Day[] = [{
     day: 'Monday', 
     tasks: [
-        'Wipe Kitchen counters',
-        'Load dishwasher',
-        'Take out trash'
+        'Change sheets',
+        'Dust bedroom',
+        'Vacuum floors',
+        'Laundry: sheets'
     ]
 }, {
     day: 'Tuesday', 
     tasks: [
-        'test'
+        'Clean shower & toilet',
+        'Clean counters & mirrors',
+        'Change towels',
+        'Laundry: towels, rags'
     ]
 }, {
     day: 'Wednesday', 
     tasks: [
-        'test'
+        'Clean out refrigerator',
+        'Clean counters & appliances',
+        'Organize pantry'
     ]
 }, {
     day: 'Thursday', 
     tasks: [
-        'test'
+        'Dust livingroom',
+        'Freshen fabrics (pillows)',
+        'Quick vacuum',
+        'Pick up toys'
     ]
 }, {
     day: 'Friday', 
     tasks: [
-        'test'
+        'Vacuum carpet',
+        'Sweep & mop floors',
+        'Clean mirrors & windows'
     ]
 }, {
     day: 'Saturday', 
     tasks: [
-        'test'
+        'Take out trash',
+        'Clean out cars'
     ]
 }];
 
