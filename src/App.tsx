@@ -6,6 +6,7 @@ import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import List, { ListItem } from 'material-ui/List';
+import Card from 'material-ui/Card';
 
 import Schedule from './Data';
 
@@ -50,9 +51,11 @@ class App extends Component<AppProps, {index: number}> {
         <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex}>
           {Schedule.map(({day, tasks}) => 
             <TabContainer key={day}>
-              <List>
-                {tasks.map((task, i) => <ListItem key={i}>{task}</ListItem>)}
-              </List>
+              <Card>
+                <List>
+                  {tasks.map((task, i) => <ListItem button={true} key={i}>{task}</ListItem>)}
+                </List>
+              </Card>
             </TabContainer>
           )}
         </SwipeableViews>
