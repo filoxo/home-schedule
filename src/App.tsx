@@ -5,6 +5,9 @@ import { withStyles, createStyleSheet } from 'material-ui/styles';
 import SwipeableViews from 'react-swipeable-views';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
+import List, { ListItem } from 'material-ui/List';
+
+import Schedule from './Data';
 
 const TabContainer = ({children}: {children: React.ReactNode}) => (
   <div style={{ padding: 24 }}>
@@ -41,33 +44,17 @@ class App extends Component<AppProps, {index: number}> {
             scrollable={true}
             scrollButtons="auto"
           >
-            <Tab label="Monday" />
-            <Tab label="Tuesday" />
-            <Tab label="Wednesday" />
-            <Tab label="Thursday" />
-            <Tab label="Friday" />
-            <Tab label="Saturday" />
+            {Schedule.map(({day}: {day: string}) => <Tab key={day} label={day}/>)}
           </Tabs>
         </AppBar>
         <SwipeableViews index={this.state.index} onChangeIndex={this.handleChangeIndex}>
-          <TabContainer>
-            {'Item One'}
-          </TabContainer>
-          <TabContainer>
-            {'Item Two'}
-          </TabContainer>
-          <TabContainer>
-            {'Item Three'}
-          </TabContainer>
-          <TabContainer>
-            {'Item Four'}
-          </TabContainer>
-          <TabContainer>
-            {'Item Five'}
-          </TabContainer>
-          <TabContainer>
-            {'Item Six'}
-          </TabContainer>
+          {Schedule.map(({day, tasks}) => 
+            <TabContainer key={day}>
+              <List>
+                {tasks.map((task, i) => <ListItem key={i}>{task}</ListItem>)}
+              </List>
+            </TabContainer>
+          )}
         </SwipeableViews>
       </div>
     );
