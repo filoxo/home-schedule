@@ -39,13 +39,17 @@ const Schedule: Day[] = [{
     tasks: [
         'Vacuum carpet',
         'Sweep & mop floors',
-        'Clean mirrors & windows'
+        'Clean mirrors & windows',
+        'Wipe dinner table'
     ]
 }, {
     day: 'Saturday', 
     tasks: [
+        'Wash dishes',
+        'Unload dishwasher',
         'Take out trash',
-        'Clean out cars'
+        'Clean out cars',
+        'Organize laundry room'
     ]
 }];
 
