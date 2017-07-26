@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "outDir": "build/dist",
-    "module": "commonjs",
+    "module": "es2015",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
